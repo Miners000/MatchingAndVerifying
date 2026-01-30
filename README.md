@@ -3,7 +3,7 @@
 ## Authors
 
 - Hemanshu Boppana (UFID: 74149423)
-- Trent Ford (UFID: XXXXXXXX)
+- Trent Ford (UFID: 80027867)
 
 ## Files
 
@@ -105,6 +105,6 @@ Example generation:
 		 Record `Verifier time = ... microseconds`.
 
 ## Graph of Results
-Recorded results in a CSV file and plotted on a graph. Should show a graph of O(n^2).
+Recorded results and plotted on a graph. Should show a graph of O(n^2).
 
 (Graph HERE)
