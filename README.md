@@ -107,4 +107,4 @@ Example generation:
 ## Graph of Results
 Recorded results and plotted on a graph. Should show a graph of O(n^2).
 
-!TaskCGraphsAndSolution/MatchingGraph.png
+![](TaskCGraphsAndSolution/MatchingGraph.png)
