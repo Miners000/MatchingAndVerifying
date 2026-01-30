@@ -8,10 +8,11 @@ RESULTSDIR = results
 
 MATCHING = $(BINDIR)/matching_engine
 VERIFIER = $(BINDIR)/verifier
+GENERATOR = $(BINDIR)/generator
 
 .PHONY: all clean test directories
 
-all: directories $(MATCHING) $(VERIFIER)
+all: directories $(MATCHING) $(VERIFIER) $(GENERATOR)
 
 directories:
 	@mkdir -p $(BINDIR) $(DATADIR) $(RESULTSDIR)
@@ -20,6 +21,9 @@ $(MATCHING): $(SRCDIR)/matching.cpp
 	$(CXX) $(CXXFLAGS) $< -o $@
 
 $(VERIFIER): $(SRCDIR)/verifier.cpp
+	$(CXX) $(CXXFLAGS) $< -o $@
+
+$(GENERATOR): $(SRCDIR)/generator.cpp
 	$(CXX) $(CXXFLAGS) $< -o $@
 
 test: all

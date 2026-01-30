@@ -2,6 +2,7 @@
 #include <vector>
 #include <fstream>
 #include <string>
+#include <chrono>
 
 using namespace std;
 
@@ -33,6 +34,8 @@ int main(int argc, char* argv[])
 		cout << "Invalid: Invalid or non-positive n" << endl;
 		return 1;
 	}
+
+	auto start = chrono::high_resolution_clock::now();
 
 	vector<vector<int>> hospitalPrefs(n, vector<int>(n));
 	vector<vector<int>> studentPrefs(n, vector<int>(n));
@@ -180,6 +183,9 @@ int main(int argc, char* argv[])
 	}
 
 	cout << "VALID STABLE" << endl;
+	auto end = chrono::high_resolution_clock::now();
+	chrono::duration<double, micro> duration = end - start;
+	cout << "Verifier time = " << duration.count() << " microseconds" << endl;
 	return 0;
 }
 
